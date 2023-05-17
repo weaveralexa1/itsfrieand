@@ -1,0 +1,1392 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head><meta name="p:domain_verify" content="92e58ebcb019dad7866fff4ccd887383"/>
+<meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" >-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!-- Grow Social by Mediavine v.2.16.3 https://marketplace.mediavine.com/grow-social-pro/ -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="GoPetFriendly.com - Pet Friendly Hotel &amp; Travel Tips" />
+<meta property="og:description" content="Helping pet lovers make memories with their pets by recommending pet friendly destinations and share pet travel tips." />
+<meta property="og:url" content="https://www.gopetfriendly.com/blog/" />
+<meta property="og:site_name" content="GoPetFriendly.com" />
+<meta property="og:updated_time" content="2023-03-03T14:08:02+00:00" />
+<meta property="article:published_time" content="2016-11-11T14:46:41+00:00" />
+<meta property="article:modified_time" content="2023-03-03T14:08:02+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GoPetFriendly.com - Pet Friendly Hotel &amp; Travel Tips" />
+<meta name="twitter:description" content="Helping pet lovers make memories with their pets by recommending pet friendly destinations and share pet travel tips." />
+<!-- Grow Social by Mediavine v.2.16.3 https://marketplace.mediavine.com/grow-social-pro/ -->
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>GoPetFriendly.com - Pet Friendly Hotel &amp; Travel Tips</title><link rel="stylesheet" href="https://www.gopetfriendly.com/blog/wp-content/cache/min/1/4ad9b396263096d61990aeb1c75ba25c.css" media="all" data-minify="1" />
+	<meta name="description" content="Helping pet lovers make memories with their pets by recommending pet friendly destinations and share pet travel tips." />
+	<link rel="canonical" href="https://www.gopetfriendly.com/blog/" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.gopetfriendly.com/blog/","url":"https://www.gopetfriendly.com/blog/","name":"GoPetFriendly.com - Pet Friendly Hotel & Travel Tips","isPartOf":{"@id":"https://www.gopetfriendly.com/blog/#website"},"about":{"@id":"https://www.gopetfriendly.com/blog/#organization"},"datePublished":"2016-11-11T19:46:41+00:00","dateModified":"2023-03-03T19:08:02+00:00","description":"Helping pet lovers make memories with their pets by recommending pet friendly destinations and share pet travel tips.","breadcrumb":{"@id":"https://www.gopetfriendly.com/blog/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.gopetfriendly.com/blog/"]}]},{"@type":"BreadcrumbList","@id":"https://www.gopetfriendly.com/blog/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"BLOG/"}]},{"@type":"WebSite","@id":"https://www.gopetfriendly.com/blog/#website","url":"https://www.gopetfriendly.com/blog/","name":"GoPetFriendly.com","description":"Pet Friendly Hotel &amp; Travel Tips","publisher":{"@id":"https://www.gopetfriendly.com/blog/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.gopetfriendly.com/blog/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.gopetfriendly.com/blog/#organization","name":"GoPetFriendly.com","url":"https://www.gopetfriendly.com/blog/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.gopetfriendly.com/blog/#/schema/logo/image/","url":"https://www.gopetfriendly.com/blog/wp-content/uploads/2020/10/GPF-Logo.png","contentUrl":"https://www.gopetfriendly.com/blog/wp-content/uploads/2020/10/GPF-Logo.png","width":400,"height":400,"caption":"GoPetFriendly.com"},"image":{"@id":"https://www.gopetfriendly.com/blog/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/GoPetFriendly","https://twitter.com/GoPetFriendly","https://www.pinterest.com/gopetfriendly/","https://www.instagram.com/gopetfriendly/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="GoPetFriendly.com &raquo; Feed" href="https://www.gopetfriendly.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="GoPetFriendly.com &raquo; Comments Feed" href="https://www.gopetfriendly.com/blog/comments/feed/" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--accent: #cd2653;--wp--preset--color--primary: #000000;--wp--preset--color--secondary: #6d6d6d;--wp--preset--color--subtle-background: #dcd7ca;--wp--preset--color--background: #f5efe0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 26.25px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 21px;--wp--preset--font-size--larger: 32px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+<style id='dpsp-frontend-style-pro-inline-css'>
+
+			@media screen and ( max-width : 720px ) {
+				aside#dpsp-floating-sidebar.dpsp-hide-on-mobile.opened {
+					display: none;
+				}
+			}
+			
+			@media screen and ( max-width : 720px ) {
+				aside#dpsp-floating-sidebar.dpsp-hide-on-mobile.opened {
+					display: none;
+				}
+			}
+			
+</style>
+
+<style id='twentytwenty-style-inline-css'>
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #cd2653; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #cd2653; }button:not(.toggle),.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #cd2653; }.fill-children-accent,.fill-children-accent * { fill: #cd2653; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dcd7ca; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dcd7ca; }.wp-block-table.is-style-stripes { border-bottom-color: #dcd7ca; }.wp-block-latest-posts.is-grid li { border-top-color: #dcd7ca; }:root .has-subtle-background-color { color: #dcd7ca; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #cd2653; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #cd2653; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+</style>
+<link rel='stylesheet' id='twentytwenty-print-style-css' href='https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/print.css?ver=1.1' media='print' />
+
+
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.gopetfriendly.com/blog/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script id='accordions_js-js-extra'>
+var accordions_ajax = {"accordions_ajaxurl":"https:\/\/www.gopetfriendly.com\/blog\/wp-admin\/admin-ajax.php"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/plugins/accordions/assets/frontend/js/scripts.js?ver=6.1.1' id='accordions_js-js'></script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/index.js?ver=1.1' id='twentytwenty-js-js' async></script>
+<link rel="alternate" type="application/json+oembed" href="https://www.gopetfriendly.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gopetfriendly.com%2Fblog%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.gopetfriendly.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gopetfriendly.com%2Fblog%2F&#038;format=xml" />
+<style>
+
+    /* for unique landing page accent color values,  put any new css added here inside tcb-bridge/js/editor */
+
+    /* accent color */
+    #thrive-comments .tcm-color-ac,
+    #thrive-comments .tcm-color-ac span {
+        color: #7aa938;
+    }
+
+    /* accent color background */
+    #thrive-comments .tcm-background-color-ac,
+    #thrive-comments .tcm-background-color-ac-h:hover span,
+    #thrive-comments .tcm-background-color-ac-active:active {
+        background-color: #7aa938    }
+
+    /* accent color border */
+    #thrive-comments .tcm-border-color-ac {
+        border-color: #7aa938;
+        outline: none;
+    }
+
+    #thrive-comments .tcm-border-color-ac-h:hover {
+        border-color: #7aa938;
+    }
+
+    #thrive-comments .tcm-border-bottom-color-ac {
+        border-bottom-color: #7aa938;
+    }
+
+    /* accent color fill*/
+    #thrive-comments .tcm-svg-fill-ac {
+        fill: #7aa938;
+    }
+
+    /* accent color for general elements */
+
+    /* inputs */
+    #thrive-comments textarea:focus,
+    #thrive-comments input:focus {
+        border-color: #7aa938;
+        box-shadow: inset 0 0 3px#7aa938;
+    }
+
+    /* links */
+    #thrive-comments a {
+        color: #7aa938;
+    }
+
+    /*
+	* buttons and login links
+	* using id to override the default css border-bottom
+	*/
+    #thrive-comments button,
+    #thrive-comments #tcm-login-up,
+    #thrive-comments #tcm-login-down {
+        color: #7aa938;
+        border-color: #7aa938;
+    }
+
+    /* general buttons hover and active functionality */
+    #thrive-comments button:hover,
+    #thrive-comments button:focus,
+    #thrive-comments button:active {
+        background-color: #7aa938    }
+
+</style>
+	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style type="text/css" data-type="vc_custom-css">@media (max-width: 767px) {
+    .mobile-hide {
+        display: none;
+    }
+    
+    .post-inner > .entry-content {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .mobile-one { order: 1; }
+    .mobile-two { order: 2;  }
+    .mobile-three { order: 3; }
+    .mobile-four { order: 4; }
+    .mobile-five { order: 5; }
+    .mobile-six { order: 6; }
+    .mobile-seven { order: 7; }
+    .mobile-eight { order: 8; }
+    .mobile-nine { order: 9; }
+    .mobile-ten { order: 10; }
+
+    .travelblog {
+        height: auto !Important;
+    }
+
+    .search-section .vc_wp_search.wpb_content_element {
+        margin-bottom: 0;
+    }
+    
+    .search-section .widget.widget_search {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .search-section .widget.widget_search .search-field::placeholder {
+        color: #73459Bb0;
+    }
+
+    .search-section .widget.widget_search .search-field {
+        font-size: 24px;
+        line-height: 30px;
+        border-bottom-color: #73459b;
+        color: #73459B;
+    }
+
+    .search-section .widget.widget_search {
+        border-color: #73459B;
+        border-width: 2px;
+        padding: 20px;
+    }
+
+    .categories .vc_column-inner {
+        padding-top: 0 !important;
+    }
+
+    .popular .widget.tptn_posts_list_widget .widget-title {
+        font: 600 15px/18px 'Roboto', Arial, 'sans-serif';
+        color: #f26222;
+        border-bottom: 1px solid #d5d5d6;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        margin-bottom: 20px; letter-spacing:0.5px;
+    }
+
+    .popular .widget.tptn_posts_list_widget .widget-title:after {
+        content: '';
+        display: block;
+        border-bottom:4px solid #f26222;
+        margin:6px 0 -1px;
+        width: 147px; /*150, 148, 183px*/
+    }
+    .popular .widget.tptn_posts_list_widget ol {list-style-type:none; margin:0; padding:0;}
+    .popular .widget.tptn_posts_list_widget li {margin:0 0 19px 0; padding:0 0 5px 0; border-bottom:1px solid #d5d5d6;}
+    .popular .widget.tptn_posts_list_widget li > a {display:inline-block; width:120px;}
+    .popular .widget.tptn_posts_list_widget img {width:120px;}
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb {display:inline-block; width:56%; margin-left:14px; vertical-align:top; line-height:18px;}
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb a {font:600 15px/20px 'Roboto', Arial, 'sans-serif'; color:#0B4561; text-decoration:none;}
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb a:hover {font:600 15px/20px 'Roboto', Arial, 'sans-serif'; color:#0B4561; text-decoration:underline;}
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb .tptn_date {font:300 14px/16px 'Roboto', Arial, 'sans-serif'; color:#58595B; text-decoration:none; display:block; margin-top:7px;}
+    .popular .widget.tptn_posts_list_widget li:last-child {margin-bottom:7px;}
+
+
+    .newsletter .mc4wp-form-fields {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .newsletter #mc_embed_signup input {
+        font-size: 24px;
+    }
+
+    .newsletter .mc4wp-form-fields input[type="email"] {
+        width: auto;
+    }
+
+    .newsletter .mc4wp-form-fields input[type="submit"] {
+        border: 1px solid #73459B !important;
+    }
+
+    .newsletter .wpb_raw_code.wpb_content_element.wpb_raw_html {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb {width:70%;}
+
+    .newsletter #mc_embed_signup input {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:480px) {
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb {width:65%;}
+
+    .newsletter #mc_embed_signup input {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:415px) {
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb {width:58%;}
+}
+
+@media (max-width:347px) {
+    .popular .widget.tptn_posts_list_widget li .tptn_after_thumb {width:53%;}
+}
+
+
+.no-title .widgettitle,
+.no-title .widget-title {
+    display: none;
+}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1670592636487{padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1587047351549{margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+<!--GPF Core-->
+<link href="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/images/favicon.ico" rel="shortcut icon">
+<!-- CSS -->
+
+<!-- link href="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/css/bootstrap/bootstrap-grid.min.css" rel="stylesheet" -->
+<!-- link href="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/css/bootstrap/bootstrap-reboot.min.css" rel="stylesheet" -->
+
+ <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+ 
+ 
+<!--GPF Core-->
+
+<style type="text/css">
+.roundImg {border-radius:50%;}
+.alm-masonry .vc_col-sm-6 {position:relative!important; left:0 !important; top:0 !important; margin-bottom:34px;}
+.modal-dialog {max-width:500px; margin:20px auto!important;}
+@media screen and (max-width:375px) { .modal-dialog {max-width:300px;} }
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=UA-9134122-1"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9134122-1');
+</script>
+<script type="rocketlazyloadscript">
+(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-9134122-1', 'auto');
+ga('send', 'pageview');
+</script>
+</head>
+
+	<body class="home page-template page-template-home page-template-home-php page page-id-28467 has-grow-sidebar singular enable-search-modal missing-post-thumbnail has-no-pagination not-showing-comments hide-avatars footer-top-visible wpb-js-composer js-comp-ver-6.5.0 vc_responsive">
+
+		<a class="skip-link screen-reader-text" href="#site-content">Skip to the content</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><header class="top">
+            <nav class="navbar">
+                <input type="hidden" id="saveID" value="">
+                <div class="logo" style="width:auto!important;"><a href="https://www.gopetfriendly.com/" class="c_logo"><img width="47" height="45" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2047%2045'%3E%3C/svg%3E" class="main-logo" alt="GoPetFriendly - Do More Together" title="GoPetFriendly - Do More Together" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/images/header-logo-gpf.svg" /><noscript><img width="47" height="45" src="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/images/header-logo-gpf.svg" class="main-logo" alt="GoPetFriendly - Do More Together" title="GoPetFriendly - Do More Together" /></noscript></a>                    <div class="nav-left">
+                                                <div class="menu-top-navigation-container"><ul id="menu-top-navigation" class="menu"><li id="menu-item-33264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-28467 current_page_item menu-item-33264"><a href="https://www.gopetfriendly.com/blog/" aria-current="page">Blog</a></li>
+<li id="menu-item-36753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36753"><a href="https://www.gopetfriendly.com/blog/pet-travel-perks/">Pet Travel Perks</a></li>
+<li id="menu-item-33265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33265"><a href="https://www.gopetfriendly.com/TripPlannerbeta/">TRIP PLANNER (BETA)</a></li>
+<li id="menu-item-33266" class="login menu-item menu-item-type-custom menu-item-object-custom menu-item-33266"><a>LOGIN</a></li>
+</ul></div>     
+                            
+                    </div>
+                </div>
+                                                				<div class="menu-right-slider-container"><ul id="menu-right-slider" class="menu"><li id="menu-item-33267" class="login menu-item menu-item-type-custom menu-item-object-custom menu-item-33267"><a>LOGIN</a></li>
+<li id="menu-item-33268" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-33268"><a href="https://www.gopetfriendly.com/blog/" aria-current="page">Blog</a></li>
+<li id="menu-item-36752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36752"><a href="https://www.gopetfriendly.com/blog/pet-travel-perks/">Pet Travel Perks</a></li>
+<li id="menu-item-33269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33269"><a href="https://www.gopetfriendly.com/TripPlannerbeta/">TRIP PLANNER (BETA)</a></li>
+<li id="menu-item-33270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33270"><a href="https://www.gopetfriendly.com/blog/add-or-edit-a-listing/">ADD A PLACE</a></li>
+<li id="menu-item-33271" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33271"><a href="https://www.gopetfriendly.com/blog/travel-tips-more/">TRIP IDEAS</a></li>
+<li id="menu-item-33586" class="userb menu-item menu-item-type-custom menu-item-object-custom menu-item-33586"><a>Contact</a></li>
+</ul></div>                              
+                <div class="nav-search">
+                                        <div class="search-box">
+                    <input type="text" name="search_top_keyword" id="search_top_autocomplete" autocomplete="off" placeholder="Search GoPetFriendly" class="header-search-input"/>
+                    <button class="header-search"><img width="24" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2022'%3E%3C/svg%3E" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-search.svg" /><noscript><img width="24" height="22" src="https://www.gopetfriendly.com/assets-front/images/icon-search.svg" /></noscript></button>
+                    <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display:none;">
+                        
+                    </ul>
+                </div>
+                    <div class="navdropdown">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div> 
+                </div>                       
+            </nav>
+        </header>
+
+        
+		
+<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+
+	<div class="menu-modal-inner modal-inner">
+
+		<div class="menu-wrapper section-inner">
+
+			<div class="menu-top">
+
+				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+					<span class="toggle-text">Close Menu</span>
+					<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" /></svg>				</button><!-- .nav-toggle -->
+
+				
+					<nav class="mobile-menu" aria-label="Mobile" role="navigation">
+
+						<ul class="modal-menu reset-list-style">
+
+						<li class="page_item page-item-33310"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/most-read/">Most Read</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-36433"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/pet-travel-perks/">Pet Travel Perks</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33311"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/recent-posts/">Recent Posts</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33423"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/search-results/">Search Results</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33402"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/book/">The Ultimate Pet Friendly Road Trip</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-16013"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/about-us/">About Us</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33067"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/press/">Press</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33052"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/faqs/">Frequently Asked Questions</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33070 page_item_has_children menu-item-has-children"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/">Content Policy</a><button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target=".menu-modal .page-item-33070 > ul" data-toggle-type="slidetoggle" data-toggle-duration="250" aria-expanded="false"><span class="screen-reader-text">Show sub menu</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><polygon fill="" fill-rule="evenodd" points="1319.899 365.778 1327.678 358 1329.799 360.121 1319.899 370.021 1310 360.121 1312.121 358" transform="translate(-1310 -358)" /></svg></button></div><!-- .ancestor-wrapper -->
+<ul class='children'>
+	<li class="page_item page-item-18942"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/review-writing-guidelines/">Review Writing Guidelines</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-32824"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/review-integrity/">Review Integrity</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-33071"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/photo-video-guidelines/">Photo And Video Guidelines</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-33076"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/blog-comment-guidelines/">Blog Comment Guidelines</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-33079"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/username-profile-guidelines/">Username and Profile Guidelines</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-33082"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/content-policy/management-responses/">Management Responses</a></div><!-- .ancestor-wrapper --></li>
+</ul>
+</li>
+<li class="page_item page-item-33054 page_item_has_children menu-item-has-children"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/legal/">Legal</a><button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target=".menu-modal .page-item-33054 > ul" data-toggle-type="slidetoggle" data-toggle-duration="250" aria-expanded="false"><span class="screen-reader-text">Show sub menu</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><polygon fill="" fill-rule="evenodd" points="1319.899 365.778 1327.678 358 1329.799 360.121 1319.899 370.021 1310 360.121 1312.121 358" transform="translate(-1310 -358)" /></svg></button></div><!-- .ancestor-wrapper -->
+<ul class='children'>
+	<li class="page_item page-item-18938"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/legal/online-privacy-policy/">Online Privacy Policy</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-18940"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/legal/terms-of-use/">Terms of Use</a></div><!-- .ancestor-wrapper --></li>
+	<li class="page_item page-item-11461"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/legal/advertising-and-review-disclosures/">Advertising and Review Disclosures</a></div><!-- .ancestor-wrapper --></li>
+</ul>
+</li>
+<li class="page_item page-item-33085"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/add-or-edit-a-listing/">Add Or Edit A Listing</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33086"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/sponsored-placements/">Sponsored Placements</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-33091"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/partners/">Become A Partner</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-31796"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/sitemap/">Sitemap</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-18945"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/contact-us/">Contact Us</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-8638"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/destinations/">Destinations</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-1607"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/travel-tips-more/">Travel Tips &#038; More</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-8642"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/archives/">Archives</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-23006"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/travel-essentials/">Pet Travel Gear We Use</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-28467 current_page_item current-menu-item"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/" aria-current="page">Home</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-30526"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/gopetfriendly-blogging-team/">Meet The GoPetFriendly.com Blogging Team</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-26295"><div class="ancestor-wrapper"><a href="https://www.gopetfriendly.com/blog/welcome-to-gopetfriendly-com/">Welcome to GoPetFriendly!</a></div><!-- .ancestor-wrapper --></li>
+
+						</ul>
+
+					</nav>
+
+					
+			</div><!-- .menu-top -->
+
+			<div class="menu-bottom">
+
+				
+					<nav aria-label="Expanded Social links" role="navigation">
+						<ul class="social-menu reset-list-style social-icons fill-children-current-color">
+
+							<li id="menu-item-12874" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12874"><a title="Like us on Facebook" target="_blank" rel="noopener" href="http://www.facebook.com/GoPetFriendly"><span class="screen-reader-text">F</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg></a></li>
+<li id="menu-item-12873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12873"><a title="Tweet us on Twitter" target="_blank" rel="noopener" href="http://twitter.com/GoPetFriendly"><span class="screen-reader-text">T</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></a></li>
+<li id="menu-item-17883" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17883"><a title="Follow us on Instagram" target="_blank" rel="noopener" href="https://instagram.com/gopetfriendly"><span class="screen-reader-text">I</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg></a></li>
+<li id="menu-item-21845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21845"><a title="Follow us on Pinterest" target="_blank" rel="noopener" href="http://www.pinterest.com/gopetfriendly/"><span class="screen-reader-text">P</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.289,2C6.617,2,3.606,5.648,3.606,9.622c0,1.846,1.025,4.146,2.666,4.878c0.25,0.111,0.381,0.063,0.439-0.169 c0.044-0.175,0.267-1.029,0.365-1.428c0.032-0.128,0.017-0.237-0.091-0.362C6.445,11.911,6.01,10.75,6.01,9.668 c0-2.777,2.194-5.464,5.933-5.464c3.23,0,5.49,2.108,5.49,5.122c0,3.407-1.794,5.768-4.13,5.768c-1.291,0-2.257-1.021-1.948-2.277 c0.372-1.495,1.089-3.112,1.089-4.191c0-0.967-0.542-1.775-1.663-1.775c-1.319,0-2.379,1.309-2.379,3.059 c0,1.115,0.394,1.869,0.394,1.869s-1.302,5.279-1.54,6.261c-0.405,1.666,0.053,4.368,0.094,4.604 c0.021,0.126,0.167,0.169,0.25,0.063c0.129-0.165,1.699-2.419,2.142-4.051c0.158-0.59,0.817-2.995,0.817-2.995 c0.43,0.784,1.681,1.446,3.013,1.446c3.963,0,6.822-3.494,6.822-7.833C20.394,5.112,16.849,2,12.289,2"></path></svg></a></li>
+<li id="menu-item-12872" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12872"><a title="Subscribe to our RSS Feed" target="_blank" rel="noopener" href="http://feeds.feedburner.com/gopetfriendly"><span class="screen-reader-text">R</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,8.667V12c5.515,0,10,4.485,10,10h3.333C15.333,14.637,9.363,8.667,2,8.667z M2,2v3.333 c9.19,0,16.667,7.477,16.667,16.667H22C22,10.955,13.045,2,2,2z M4.5,17C3.118,17,2,18.12,2,19.5S3.118,22,4.5,22S7,20.88,7,19.5 S5.882,17,4.5,17z"></path></svg></a></li>
+<li id="menu-item-13988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13988"><a title="Subscribe to Our Newsletter" target="_blank" rel="noopener" href="http://feedburner.google.com/fb/a/mailverify?uri=gopetfriendly&#038;loc=en_US"><span class="screen-reader-text">E</span><svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,8.667V12c5.515,0,10,4.485,10,10h3.333C15.333,14.637,9.363,8.667,2,8.667z M2,2v3.333 c9.19,0,16.667,7.477,16.667,16.667H22C22,10.955,13.045,2,2,2z M4.5,17C3.118,17,2,18.12,2,19.5S3.118,22,4.5,22S7,20.88,7,19.5 S5.882,17,4.5,17z"></path></svg></a></li>
+
+						</ul>
+					</nav><!-- .social-menu -->
+
+				
+			</div><!-- .menu-bottom -->
+
+		</div><!-- .menu-wrapper -->
+
+	</div><!-- .menu-modal-inner -->
+
+</div><!-- .menu-modal -->
+<div class="main">
+<main id="site-content" role="main">
+	<article class="post-28467 page type-page status-publish hentry mv-content-wrapper grow-content-body" id="post-28467">
+		<div class="post-inner thin ">
+		<div class="entry-content">
+			<span id="dpsp-post-content-markup" data-image-pin-it="false"></span><div class="vc_row wpb_row vc_row-fluid header mobile-one"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space  firsth45"   style="height: 133px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<div class="travelblog"><h2>Take Paws Blog</h2><h3>A Pet Friendly Travel Blog</h3><p>Life is better when it’s shared with pets! Whether you’re planning a cross-country road trip or exploring your own backyard, our tips, resources, and paws-on-the-ground destination guides will make your next pet friendly adventure unforgettable.</p><!-- Begin Mailchimp Signup Form -->
+<!-- link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+[mc4wp_form id="33287"]
+</div -->
+<!--End mc_embed_signup-->
+</div>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid travel-inspiration mobile-four"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html martop" >
+		<div class="wpb_wrapper">
+			<h2 class="orange"><span>Travel Inspiration</span></h2>
+		</div>
+	</div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid homeblocks"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/national-parks" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-National-Parks-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/national-parks/">National Parks</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/beaches/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Hit-the-Beach-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/beaches/">Hit The Beach</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/mountain-getaways" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Mountain-Getaways-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/mountain-getaways">Mountain Getaways</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid homeblocks"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/pet-friendly-cities/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Cities-to-Explore-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/pet-friendly-cities/">Cities To Explore</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/road-trips/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Iconic-Road-Trips-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/road-trips/">Iconic Road Trips</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/attractions" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="900" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20600'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-120x80.jpg 120w" data-lazy-sizes="(max-width: 900px) 100vw, 900px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions.webp 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-120x80.jpg 120w"sizes="(max-width: 900px) 100vw, 900px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions.jpg" height="600" width="900" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions.jpg 900w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-768x512.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/Inspiration-Unique-Attractions-120x80.jpg 120w" sizes="(max-width: 900px) 100vw, 900px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/attractions">Unique Attractions</a></p>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid recentpost mobile-two"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<h2 class="orange"><span>Recent Blog Posts</span></h2>
+		</div>
+	</div>
+
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- Widget Shortcode --><div id="recent-posts-widget-with-thumbnails-3" class="widget-odd widget-last widget-first widget-1 widget recent-posts-widget-with-thumbnails widget-shortcode area-st542_233wzm ">
+<div id="rpwwt-recent-posts-widget-with-thumbnails-3" class="rpwwt-widget">
+<h2 class="widgettitle">Popular Posts</h2>
+	<ul>
+		<li><a href="https://www.gopetfriendly.com/blog/enjoying-ontarios-thousand-islands-region-with-your-dog/"><img width="450" height="450" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20450'%3E%3C/svg%3E" class="attachment-450x450 size-450x450 wp-post-image" alt="Enjoying Ontario&#039;s Thousand Islands Region With Your Dog | GoPetFriendly.com" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-600x600.jpg 600w, https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-80x80.jpg 80w, https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-120x120.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-600x600.jpg" /><noscript><img width="450" height="450" src="https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-600x600.jpg" class="attachment-450x450 size-450x450 wp-post-image" alt="Enjoying Ontario&#039;s Thousand Islands Region With Your Dog | GoPetFriendly.com" decoding="async" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-600x600.jpg 600w, https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-80x80.jpg 80w, https://www.gopetfriendly.com/blog/wp-content/uploads/2018/09/Grippen-Lake-in-Lyndhurst-2-120x120.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" /></noscript><span class="rpwwt-post-title">Enjoying The Thousand Islands Region Of Ontario With Your Dog</span></a></li>
+		<li><a href="https://www.gopetfriendly.com/blog/pet-travel-hazards-overstimulation/"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="attachment-450x450 size-450x450 wp-post-image" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-768x513.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S.webp 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-768x513.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-768x513.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2023/05/Depositphotos_11327549_S-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="attachment-450x450 size-450x450 wp-post-image sp-no-webp" decoding="async" loading="lazy"  > </picture></noscript><span class="rpwwt-post-title">Help For Hyper Dogs &#8211; Avoid Overstimulation On Vacation</span></a></li>
+		<li><a href="https://www.gopetfriendly.com/blog/the-ultimate-pet-friendly-american-road-trip/"><img width="450" height="253" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20253'%3E%3C/svg%3E" class="attachment-450x450 size-450x450 wp-post-image" alt="Buster and Ty, the GoPetFriendly.com dogs in Washington DC" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092.jpg 1500w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-768x432.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-220x125.jpg 220w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092.webp 1500w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-768x432.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-220x125.jpg 220w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092.jpg" alt="Buster and Ty, the GoPetFriendly.com dogs in Washington DC" height="253" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092.jpg 1500w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-768x432.jpg 768w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2017/05/DSC04092-220x125.jpg 220w" sizes="(max-width: 450px) 100vw, 450px" class="attachment-450x450 size-450x450 wp-post-image sp-no-webp" decoding="async" loading="lazy"  > </picture></noscript><span class="rpwwt-post-title">49 Places To See On A Pet Friendly American Road Trip</span></a></li>
+	</ul>
+</div><!-- .rpwwt-widget -->
+</div><!-- /Widget Shortcode -->
+		</div>
+	</div>
+<div class="vc_btn3-container  recentbtn vc_btn3-inline" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.gopetfriendly.com/blog/recent-posts/" title="Recent Posts">Read More</a></div><div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid newsletter mobile-five mobile-only"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<!-- Begin Mailchimp Signup Form -->
+
+<div id="mc_embed_signup">
+<script type="rocketlazyloadscript">(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.9.4 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-33287" method="post" data-id="33287" data-name="" ><div class="mc4wp-form-fields"><input type="email" name="EMAIL" placeholder="Your Email Address" required />
+<input type="submit" value="Subscribe" />
+
+
+
+</div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1684307299" /><input type="hidden" name="_mc4wp_form_id" value="33287" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->
+</div>
+<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid search-section mobile-three mobile-only vc_custom_1670592636487"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div  class="vc_wp_search wpb_content_element"><div class="widget widget_search"><!-- BEGIN Supplemental Engine Search form -->
+<form role="search" method="get" class="search-form" action="https://www.gopetfriendly.com/blog/search-results/">
+<label><span class="screen-reader-text" style="display:none;">Search for:</span>
+<input type="search" class="search-field" name="searchwp" placeholder="Search Our Blog" value="" title="Search for:" /></label><input type="submit" class="search-submit" value="Search" />
+</form>
+<!-- END Supplemental Engine Search form --></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid categories mobile-six mobile-only"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html martop" >
+		<div class="wpb_wrapper">
+			<h2 class="orange"><span>Categories</span></h2>
+		</div>
+	</div>
+<div  class="vc_wp_categories wpb_content_element no-title"><div class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-1375"><a href="https://www.gopetfriendly.com/blog/road-trips/">Road Trips</a> (23)
+</li>
+	<li class="cat-item cat-item-1321"><a href="https://www.gopetfriendly.com/blog/travel-destinations/">Travel Destinations</a> (293)
+</li>
+	<li class="cat-item cat-item-22"><a href="https://www.gopetfriendly.com/blog/travel-gear/">Travel Gear</a> (32)
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.gopetfriendly.com/blog/travel-news/">Travel News</a> (97)
+</li>
+	<li class="cat-item cat-item-1315"><a href="https://www.gopetfriendly.com/blog/travel-resources/">Travel Resources</a> (43)
+</li>
+	<li class="cat-item cat-item-30"><a href="https://www.gopetfriendly.com/blog/travel-tips/">Travel Tips</a> (148)
+</li>
+			</ul>
+
+			</div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid popular mobile-seven mobile-only"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html martop" >
+		<div class="wpb_wrapper">
+			<h2 class="orange"><span>Popular Posts</span></h2>
+		</div>
+	</div>
+<div  class="wpb_widgetised_column wpb_content_element no-title">
+		<div class="wpb_wrapper">
+			
+			<div id="widget_tptn_pop-9" class="widget-odd widget-last widget-first widget-1 widget tptn_posts_list_widget"><h3 class="widget-title">Popular Posts</h3><div class="tptn_posts  tptn_posts_widget tptn_posts_widget9    "><ol><li><a href="https://www.gopetfriendly.com/blog/taking-your-dog-to-canada/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" title="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2019/01/Dog-to-Canada-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2019/01/Dog-to-Canada-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" title="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/taking-your-dog-to-canada/"     class="tptn_link"><span class="tptn_title">Traveling With Pets To Canada From The U.S. &#8211;&hellip;</span></a><span class="tptn_date"> January 23, 2023</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/symptoms-fever-dogs/"     class="tptn_link"><img width="540" height="300"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20540%20300'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="How to Tell If Your Dog Has A Fever" title="How to Tell If Your Dog Has A Fever" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2016/12/Image002-540x300.jpg" /><noscript><img width="540" height="300"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2016/12/Image002-540x300.jpg" class="tptn_thumb tptn_featured large" alt="How to Tell If Your Dog Has A Fever" title="How to Tell If Your Dog Has A Fever" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/symptoms-fever-dogs/"     class="tptn_link"><span class="tptn_title">How to Tell If Your Dog Has A Fever</span></a><span class="tptn_date"> October 12, 2019</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/11-ways-tire-dog-small-space/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="11 Ways To Tire Out A Dog In A Small Space" title="11 Ways To Tire Out A Dog In A Small Space" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/03/Depositphotos_283581014_L-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/03/Depositphotos_283581014_L-800x450.jpg" class="tptn_thumb tptn_featured large" alt="11 Ways To Tire Out A Dog In A Small Space" title="11 Ways To Tire Out A Dog In A Small Space" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/11-ways-tire-dog-small-space/"     class="tptn_link"><span class="tptn_title">11 Ways To Tire Out A Dog In A Small Space</span></a><span class="tptn_date"> March 29, 2023</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/the-6-pet-friendly-hotel-chains-where-pets-stay-free/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Hotel Chains Where Pets Stay Free" title="Hotel Chains Where Pets Stay Free" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" data-lazy-sizes="(max-width: 580px) 100vw, 580px" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Hotel Chains Where Pets Stay Free" title="Hotel Chains Where Pets Stay Free" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" sizes="(max-width: 580px) 100vw, 580px" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/the-6-pet-friendly-hotel-chains-where-pets-stay-free/"     class="tptn_link"><span class="tptn_title">Hotel Chains Where Pets Stay Free</span></a><span class="tptn_date"> October 14, 2021</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/is-it-illegal-to-leave-your-pet-alone-in-the-car/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Is it Illegal to Leave Your Pet Alone in the Car?" title="Is it Illegal to Leave Your Pet Alone in the Car?" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/01/DSC07225-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/01/DSC07225-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Is it Illegal to Leave Your Pet Alone in the Car?" title="Is it Illegal to Leave Your Pet Alone in the Car?" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/is-it-illegal-to-leave-your-pet-alone-in-the-car/"     class="tptn_link"><span class="tptn_title">Is it Illegal to Leave Your Pet Alone in the Car?</span></a><span class="tptn_date"> January 5, 2021</span> </span></li></ol><div class="tptn_clear"></div></div></div>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid category-images mobile-hide"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid blocks2"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/travel-destinations/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/pet-friendly-destinations-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/travel-destinations/">PET FRIENDLY DESTINATIONS</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/most-read/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/most-read-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/most-read/">MOST READ</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/road-trips/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/road-trips-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/road-trips/">ROAD TRIPS</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/travel-tips/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/tips-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/travel-tips/">TIPS</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/travel-resources/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/resources-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/travel-resources/">RESOURCES</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/travel-news/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/news-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/travel-news/">NEWS</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/category/travel-gear/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/gear-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/category/travel-gear/">GEAR</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_left   post-image">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a href="https://www.gopetfriendly.com/blog/tag/health-and-safety/" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="450" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20300'%3E%3C/svg%3E" class="vc_single_image-img attachment-full" alt="" decoding="async" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety-120x80.jpg 120w" data-lazy-sizes="(max-width: 450px) 100vw, 450px" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety.jpg" /><noscript><picture><source srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety.webp 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety-120x80.jpg 120w"sizes="(max-width: 450px) 100vw, 450px" type="image/webp"><img src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety.jpg" height="300" width="450" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety.jpg 450w, https://www.gopetfriendly.com/blog/wp-content/uploads/2020/09/health-and-safety-120x80.jpg 120w" sizes="(max-width: 450px) 100vw, 450px" class="vc_single_image-img attachment-full sp-no-webp" decoding="async"  > </picture></noscript></a>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p class="homelink" style="text-align: center;"><a href="https://www.gopetfriendly.com/blog/tag/health-and-safety/">HEALTH &amp; SAFETY</a></p>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1587047351549"><div class="wpb_wrapper"><div  class="wpb_widgetised_column wpb_content_element">
+		<div class="wpb_wrapper">
+			
+			<div id="search-8" class="widget-odd widget-first widget-1 widget widget_search"><!-- BEGIN Supplemental Engine Search form -->
+<form role="search" method="get" class="search-form" action="https://www.gopetfriendly.com/blog/search-results/">
+<label><span class="screen-reader-text" style="display:none;">Search for:</span>
+<input type="search" class="search-field" name="searchwp" placeholder="Search Our Blog" value="" title="Search for:" /></label><input type="submit" class="search-submit" value="Search" />
+</form>
+<!-- END Supplemental Engine Search form --></div><div id="categories-4" class="widget-even widget-2 widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-1375"><a href="https://www.gopetfriendly.com/blog/road-trips/">Road Trips</a> (23)
+</li>
+	<li class="cat-item cat-item-1321"><a href="https://www.gopetfriendly.com/blog/travel-destinations/">Travel Destinations</a> (293)
+</li>
+	<li class="cat-item cat-item-22"><a href="https://www.gopetfriendly.com/blog/travel-gear/">Travel Gear</a> (32)
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.gopetfriendly.com/blog/travel-news/">Travel News</a> (97)
+</li>
+	<li class="cat-item cat-item-1315"><a href="https://www.gopetfriendly.com/blog/travel-resources/">Travel Resources</a> (43)
+</li>
+	<li class="cat-item cat-item-30"><a href="https://www.gopetfriendly.com/blog/travel-tips/">Travel Tips</a> (148)
+</li>
+			</ul>
+
+			</div><div id="widget_tptn_pop-7" class="widget-odd widget-3 widget tptn_posts_list_widget"><h3 class="widget-title">Popular Posts</h3><div class="tptn_posts  tptn_posts_widget tptn_posts_widget7    "><ol><li><a href="https://www.gopetfriendly.com/blog/taking-your-dog-to-canada/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" title="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2019/01/Dog-to-Canada-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2019/01/Dog-to-Canada-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" title="Traveling With Pets To Canada From The U.S. - Tips For Crossing The Border" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/taking-your-dog-to-canada/"     class="tptn_link"><span class="tptn_title">Traveling With Pets To Canada From The U.S. &#8211;&hellip;</span></a><span class="tptn_date"> January 23, 2023</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/symptoms-fever-dogs/"     class="tptn_link"><img width="540" height="300"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20540%20300'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="How to Tell If Your Dog Has A Fever" title="How to Tell If Your Dog Has A Fever" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2016/12/Image002-540x300.jpg" /><noscript><img width="540" height="300"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2016/12/Image002-540x300.jpg" class="tptn_thumb tptn_featured large" alt="How to Tell If Your Dog Has A Fever" title="How to Tell If Your Dog Has A Fever" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/symptoms-fever-dogs/"     class="tptn_link"><span class="tptn_title">How to Tell If Your Dog Has A Fever</span></a><span class="tptn_date"> October 12, 2019</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/11-ways-tire-dog-small-space/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="11 Ways To Tire Out A Dog In A Small Space" title="11 Ways To Tire Out A Dog In A Small Space" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/03/Depositphotos_283581014_L-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2023/03/Depositphotos_283581014_L-800x450.jpg" class="tptn_thumb tptn_featured large" alt="11 Ways To Tire Out A Dog In A Small Space" title="11 Ways To Tire Out A Dog In A Small Space" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/11-ways-tire-dog-small-space/"     class="tptn_link"><span class="tptn_title">11 Ways To Tire Out A Dog In A Small Space</span></a><span class="tptn_date"> March 29, 2023</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/the-6-pet-friendly-hotel-chains-where-pets-stay-free/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Hotel Chains Where Pets Stay Free" title="Hotel Chains Where Pets Stay Free" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" data-lazy-sizes="(max-width: 580px) 100vw, 580px" data-lazy-srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Hotel Chains Where Pets Stay Free" title="Hotel Chains Where Pets Stay Free" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" sizes="(max-width: 580px) 100vw, 580px" srcset="https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-800x450.jpg 800w, https://www.gopetfriendly.com/blog/wp-content/uploads/2014/12/Cat-and-Dog-Sleeping-on-Bed-220x125.jpg 220w" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/the-6-pet-friendly-hotel-chains-where-pets-stay-free/"     class="tptn_link"><span class="tptn_title">Hotel Chains Where Pets Stay Free</span></a><span class="tptn_date"> October 14, 2021</span> </span></li><li><a href="https://www.gopetfriendly.com/blog/is-it-illegal-to-leave-your-pet-alone-in-the-car/"     class="tptn_link"><img width="800" height="450"  src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20450'%3E%3C/svg%3E" class="tptn_thumb tptn_featured large" alt="Is it Illegal to Leave Your Pet Alone in the Car?" title="Is it Illegal to Leave Your Pet Alone in the Car?" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/01/DSC07225-800x450.jpg" /><noscript><img width="800" height="450"  src="https://www.gopetfriendly.com/blog/wp-content/uploads/2020/01/DSC07225-800x450.jpg" class="tptn_thumb tptn_featured large" alt="Is it Illegal to Leave Your Pet Alone in the Car?" title="Is it Illegal to Leave Your Pet Alone in the Car?" /></noscript></a><span class="tptn_after_thumb"><a href="https://www.gopetfriendly.com/blog/is-it-illegal-to-leave-your-pet-alone-in-the-car/"     class="tptn_link"><span class="tptn_title">Is it Illegal to Leave Your Pet Alone in the Car?</span></a><span class="tptn_date"> January 5, 2021</span> </span></li></ol><div class="tptn_clear"></div></div></div><div id="custom_html-15" class="widget_text widget-even widget-last widget-4 read-more widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="/blog/most-read/">Read More<img width="5" height="6" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%205%206'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/themes/twentytwenty/images/rightarrow-orange.svg"><noscript><img width="5" height="6" src="https://www.gopetfriendly.com/blog/wp-content/themes/twentytwenty/images/rightarrow-orange.svg" alt=""></noscript></a></div></div>
+		</div>
+	</div>
+</div></div></div></div>
+<span class="tve-leads-two-step-trigger tl-2step-trigger-0"></span><span class="tve-leads-two-step-trigger tl-2step-trigger-0"></span>		</div><!-- .entry-content -->
+	</div><!-- .post-inner -->
+	<div class="section-inner">
+			
+	</div><!-- .section-inner -->
+		<!-- TAG AND CATEGORY START -->
+			<!-- TAG AND CATEGORY START -->
+		</article><!-- .post --><div class="h45">&nbsp;</div>
+	</main><!-- #site-content -->
+</div>
+
+<!-- #site-footer -->
+<input type="hidden" name="urlRedirect" id="urlRedirect" value="/blog/">
+<footer>
+    <div class="footer-inside">
+     <div class="footer-intro">
+        <h6>The best information for pet friendly lodgings, restaurants, and things to do together.</h6>
+        <p>GoPetFriendly is the nation's fastest-growing pet friendly travel planning platform, with more than 1 million trips booked every year. Their unique content provides loads of inspiration, and their best-in-class database provides all the information you need to plan a memorable pet friendly experience. With free web and mobile applications, GoPetFriendly is helping people and their pets do more together.</p>
+    </div>
+    <div class="footer-links">
+        <div class="row mar0">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm">
+                        <legend>ABOUT GOPETFRIENDLY</legend>
+                        <ul>
+                            <li><a href="https://www.gopetfriendly.com/blog/about-us/">About Us</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/press/">Press</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/faqs/">FAQs</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/content-policy/">Content Policy</a></li>
+                            <li><a href="javascript:Userback.open();">Contact</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/legal/ ">Legal Stuff</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <legend>WORK WITH US</legend>
+                        <ul>
+                            <li><a href="https://www.gopetfriendly.com/blog/add-or-edit-a-listing/">Owners</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/sponsored-placements/">Sponsored Placements</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/partners/">Become A Partner</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <legend>DO MORE TOGETHER</legend>
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#addFavoriteModal">Join</a></li>                            <li><a href="https://www.gopetfriendly.com/blog/add-or-edit-a-listing/">Tell Us About A Place</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/travel-tips-more/">Pet Friendly Trip Ideas</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/">Blog</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/pet-travel-perks/">Pet Travel Perks</a></li>
+                            <li><a href="https://www.gopetfriendly.com/TripPlannerbeta/">Trip Planner (Beta)</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/road-trips/">Pet Friendly Road Trips</a></li>
+                            <li><a href="https://www.gopetfriendly.com/blog/content-policy/review-writing-guidelines/ ">Write a Review</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <legend>FOLLOW US</legend>
+                        <ul>
+                            <li><a href="https://www.facebook.com/GoPetFriendly">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/gopetfriendly/">Instagram</a></li>
+                            <li><a href="https://www.pinterest.com/gopetfriendly/">Pinterest</a></li>
+                            <li><a href="https://twitter.com/GoPetFriendly">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/explore/tags/gopetfriendly/">#gopetfriendly</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pad0">
+                <legend>POPULAR DESTINATIONS</legend>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <ul>
+                            <li><a href="https://www.gopetfriendly.com/georgia/atlanta">Atlanta</a></li>
+                            <li><a href="https://www.gopetfriendly.com/texas/austin">Austin</a></li>
+                            <li><a href="https://www.gopetfriendly.com/massachusetts/boston">Boston</a></li>
+                            <li><a href="https://www.gopetfriendly.com/south-carolina/charleston">Charleston</a></li>
+                            <li><a href="https://www.gopetfriendly.com/illinois/chicago">Chicago</a></li>
+                            <li><a href="https://www.gopetfriendly.com/south-dakota/custer">Custer State Park</a></li>
+                            <li><a href="https://www.gopetfriendly.com/colorado/denver">Denver</a></li>
+                            <li><a href="https://www.gopetfriendly.com/montana/east-glacier-park">Glacier National Park</a></li>
+                            <li><a href="https://www.gopetfriendly.com/arizona/grand-canyon">Grand Canyon National Park</a></li>
+                            <li><a href="https://www.gopetfriendly.com/nevada/las-vegas">Las Vegas</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/los-angeles">Los Angeles</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 order-sm-12">
+                        <ul>
+                            <li><a href="https://www.gopetfriendly.com/arizona/phoenix">Phoenix</a></li>
+                            <li><a href="https://www.gopetfriendly.com/oregon/portland">Portland</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/san-diego">San Diego</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/san-francisco">San Francisco</a></li>
+                            <li><a href="https://www.gopetfriendly.com/washington/seattle">Seattle</a></li>
+                            <li><a href="https://www.gopetfriendly.com/arizona/sedona">Sedona</a></li>
+                            <li><a href="https://www.gopetfriendly.com/ohio/toronto">Toronto</a></li>
+                            <li><a href="https://www.gopetfriendly.com/arizona/tucson">Tucson</a></li>
+                            <li><a href="https://www.gopetfriendly.com/washington/vancouver">Vancouver</a></li>
+                            <!-- <li><a href="https://www.gopetfriendly.com/district-of-columbia/washington">Washington, DC</a></li> -->
+                            <li><a href="https://www.gopetfriendly.com/washington-d-c">Washington, DC</a></li>
+                            <li><a href="https://www.gopetfriendly.com/wyoming/yellowstone-national-park">Yellowstone National Park</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 order-sm-1">
+                        <ul>
+                            <li><a href="https://www.gopetfriendly.com/michigan/mackinac-island">Mackinac Island</a></li>
+                            <li><a href="https://www.gopetfriendly.com/florida/miami">Miami</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/monterey">Monterey</a></li>
+                            <li><a href="https://www.gopetfriendly.com/wisconsin/montreal">Montreal</a></li>
+                            <li><a href="https://www.gopetfriendly.com/south-carolina/myrtle-beach">Myrtle Beach</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/napa">Napa</a></li>
+                            <li><a href="https://www.gopetfriendly.com/louisiana/new-orleans">New Orleans</a></li>
+                            <li><a href="https://www.gopetfriendly.com/new-york/new-york">New York</a></li>
+                            <li><a href="https://www.gopetfriendly.com/florida/orlando">Orlando</a></li>
+                            <li><a href="https://www.gopetfriendly.com/california/palm-springs">Palm Springs</a></li>
+                            <li><a href="https://www.gopetfriendly.com/pennsylvania/philadelphia">Philadelphia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-logo"><a href="https://www.gopetfriendly.com/"><img width="202" height="45" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20202%2045'%3E%3C/svg%3E" alt="GoPetFriendly - Do More Together" title="GoPetFriendly - Do More Together" data-lazy-src="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/images/footer-logo-gpf.svg" /><noscript><img width="202" height="45" src="https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/images/footer-logo-gpf.svg" alt="GoPetFriendly - Do More Together" title="GoPetFriendly - Do More Together" /></noscript></a></div>
+        <div class="footer-p"><p>&copy; 2023 GoPetFriendly.com LLC All rights reserved. <br />
+            <a href="https://www.gopetfriendly.com/blog/legal/terms-of-use/">Terms of Use</a> | <a href="https://www.gopetfriendly.com/blog/legal/online-privacy-policy/">Privacy Policy</a> | <a href="https://www.gopetfriendly.com/blog/sitemap/">Site Map</a></p>
+            <p>GoPetFriendly.com LLC is not a booking agent and does not charge any service fees to users of our site... 
+                <a class="footer-collapse" data-toggle="collapse" href="#collapseMore" role="button" aria-expanded="false" aria-controls="collapseMore">more</a></p>
+                <div class="collapse" id="collapseMore"><div class="card card-body">For your convenience, GoPetFriendly.com LLC calculates an average price for lodgings, which is based on the rates stated by the lodging providers.<br>GoPetFriendly.com LLC makes no guarantees for availability of any specific rates or prices advertised on our site. Listed prices may require a stay of a particular length or have blackout dates, qualifications or restrictions. <br />Taxes, fees may not be included for deals content. Please check with the lodging provider or booking site for the exact amount and currency.</div></div>
+                <p>GoPetFriendly.com LLC is not responsible for content on external web sites.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="mv-grow-data" data-settings='{&quot;floatingSidebar&quot;:{&quot;stopSelector&quot;:&quot;footer&quot;},&quot;general&quot;:{&quot;contentSelector&quot;:false,&quot;show_count&quot;:{&quot;content&quot;:false,&quot;sidebar&quot;:false,&quot;pop_up&quot;:false,&quot;sticky_bar&quot;:false},&quot;isTrellis&quot;:false},&quot;post&quot;:null,&quot;shareCounts&quot;:{&quot;pinterest&quot;:0,&quot;twitter&quot;:0},&quot;shouldRun&quot;:true,&quot;utmParams&quot;:[],&quot;pinterest&quot;:{&quot;pinDescriptionSource&quot;:&quot;image_alt_tag&quot;,&quot;pinDescription&quot;:null,&quot;pinTitle&quot;:null,&quot;pinImageURL&quot;:null,&quot;pinnableImages&quot;:null,&quot;postImageHidden&quot;:&quot;yes&quot;,&quot;postImageHiddenMultiple&quot;:null,&quot;lazyLoadCompatibility&quot;:null,&quot;buttonPosition&quot;:&quot;top-left&quot;,&quot;buttonShape&quot;:&quot;rectangular&quot;,&quot;showButtonLabel&quot;:&quot;yes&quot;,&quot;buttonLabelText&quot;:&quot;Save&quot;,&quot;buttonShareBehavior&quot;:&quot;post_image&quot;,&quot;hoverButtonShareBehavior&quot;:&quot;hover_image&quot;,&quot;minimumImageWidth&quot;:&quot;200&quot;,&quot;minimumImageHeight&quot;:&quot;200&quot;,&quot;showImageOverlay&quot;:null,&quot;postTypeDisplay&quot;:null,&quot;imagePinIt&quot;:&quot;0&quot;,&quot;hasContent&quot;:&quot;1&quot;,&quot;shareURL&quot;:&quot;https:\/\/www.gopetfriendly.com\/blog\/&quot;,&quot;bypassClasses&quot;:[&quot;mv-grow-bypass&quot;,&quot;no_pin&quot;],&quot;bypassDenyClasses&quot;:[&quot;dpsp-post-pinterest-image-hidden-inner&quot;,&quot;mv-create-pinterest&quot;],&quot;ignoreSelectors&quot;:[],&quot;hoverButtonIgnoreClasses&quot;:[&quot;lazyloaded&quot;,&quot;lazyload&quot;,&quot;td-animation-stack&quot;,&quot;ezlazyloaded&quot;,&quot;penci-lazy&quot;,&quot;ut-lazy&quot;,&quot;ut-image-loaded&quot;,&quot;ut-animated-image&quot;],&quot;disableIframes&quot;:null}}'></div><div style="display: none;">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"xml:space="preserve">
+	<defs>
+
+	<symbol id="tcm-reply" viewBox="0 0 100 100">
+			<g>
+				<path d="M69.9,38.1L69.9,38.1c-1.5-3.7-4.7-6.4-7.4-9.2c-2.8-2.8-6.3-4.7-9.9-6.3c-3.7-1.6-7.7-2.4-11.7-2.4h-11
+					l4.7-4.8c3.4-3.4,3.4-9,0-12.4c-3.4-3.4-8.9-3.4-12.2,0L2.8,22.7c-3.4,3.4-3.4,9,0,12.4l19.4,19.7c1.7,1.7,3.9,2.6,6.1,2.6
+					c2.2,0,4.4-0.9,6.1-2.6c3.4-3.4,3.4-9,0-12.4l-4.6-4.6h10.9c3.4,0,6.6,1.4,9.1,3.8l4.8,4.8c1.2,2,3,3.4,5.1,4.1
+					c2.1,0.6,4.5,0.4,6.6-0.7C70.5,47.5,72,42.3,69.9,38.1z"/>
+				<ellipse cx="81.1" cy="60.8" rx="8.5" ry="8.6"/>
+			</g>
+	</symbol>
+
+	<symbol id="tcm-icon-thumb_down" viewBox="0 0 24 24">
+		<g>
+			<path d="M18.984 3h4.031v12h-4.031v-12zM15 3c1.078 0 2.016 0.938 2.016 2.016v9.984c0 0.563-0.234 1.031-0.609
+			1.406l-6.563 6.609-1.078-1.078c-0.281-0.281-0.422-0.609-0.422-1.031v-0.328l0.984-4.594h-6.328c-1.078 0-2.016-0.891-2.016-1.969l0.047-0.094h-0.047v-1.922c0-0.281
+			0.047-0.516 0.141-0.75l3.047-7.031c0.281-0.703 0.984-1.219 1.828-1.219h9z" />
+		</g>
+	</symbol>
+
+	<symbol id="tcm-icon-thumb_up" viewBox="0 0 24 24">
+		<g>
+			<path d="M23.016 9.984l-0.047 0.094h0.047v1.922c0 0.281-0.047 0.516-0.141 0.75l-3.047 7.031c-0.281 0.703-0.984
+			1.219-1.828 1.219h-9c-1.078 0-2.016-0.938-2.016-2.016v-9.984c0-0.563 0.234-1.031 0.609-1.406l6.563-6.609 1.078
+			1.078c0.281 0.281 0.422 0.609 0.422 1.031v0.328l-0.984 4.594h6.328c1.078 0 2.016 0.891 2.016 1.969zM0.984 21v-12h4.031v12h-4.031z" />
+		</g>>
+
+	</symbol>
+
+	<symbol id="tcm-add-comment" viewBox="0 0 267.3 245">
+		<path style="fill:#FFFFFF;" class="st0" d="M265.7,61C259.6,27.5,230.3,2,195.1,2H72.5C33,2,0.8,34.2,0.8,73.8v77c0,0.1,0,0.1,0,0.2v81.6
+			c0,0-1.8,11.1,9.7,11.1c0,0,4.2,1,13.1-4.6l46.8-43.2h124.6c39.5,0,71.7-32.2,71.7-71.7V83.8L265.7,61z M78.4,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6S93,91.4,93,99.5C93,107.5,86.5,114,78.4,114z M137.5,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6c8.1,0,14.6,6.5,14.6,14.6C152.1,107.5,145.5,114,137.5,114z M196.5,114
+			c-8.1,0-14.6-6.5-14.6-14.6c0-8.1,6.5-14.6,14.6-14.6c8.1,0,14.6,6.5,14.6,14.6C211.1,107.5,204.6,114,196.5,114z"/>
+	</symbol>
+
+	<symbol id="tcm-logo-footer" viewBox="0 0 130 100">
+		<path style="fill:#434343;" class="st0" d="M108.8,26.5C106.7,14.9,96.5,6.1,84.4,6.1H41.9C28.2,6.1,17,17.2,17,30.9v26.7c0,0,0,0,0,0.1v28.2
+			c0,0-0.6,3.8,3.4,3.8c0,0,1.5,0.4,4.6-1.6l16.2-14.9h12.1c0.1-0.2,0.3-0.4,0.4-0.6l2.2-3.1c0.4-0.6,1.9-2.3,3.1-3.6H37.6
+			c-1.1,0-2.1,0.6-2.8,1.4l0,0L24.1,78.6V58.2c0-0.2,0.1-0.4,0.1-0.6V30.9c0-9.7,7.9-17.6,17.6-17.6h42.5c9.7,0,17.6,7.9,17.6,17.6
+			v16.9c2.6-0.4,5.3-0.6,7.2-0.7V34.4L108.8,26.5z"/>
+		<path style="fill:#57A245;" class="st1" d="M43.7,39.9c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6h38.9c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6H43.7z"/>
+		<path style="fill:#434343;" class="st0" d="M43.7,52.2h38.9c2.4,0,4.3-1.9,4.3-4.3s-1.9-4.3-4.3-4.3H43.7c-2.4,0-4.3,1.9-4.3,4.3S41.3,52.2,43.7,52.2"/>
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#57A245;" class="st2" d="M118.2,52.4c-1.2,0-1.6,0.2-2.4,0.5c-0.9,0.3-1.9,1-2.6,1.7l-1.8,1.7c-0.2,0.2-0.2,0.2-0.3,0.4
+			c-3.4,4.2-4.1,4.9-6.8,10.2c-1.2,2.5-2.7,4.8-4.2,7.1c-1,1.6-2,3.2-3.2,4.6c-0.1,0.2-0.2,0.2-0.3,0.4c-0.7,0.9-1.7,1.7-2.5,2.5
+			c-0.6,0.5-1.3,1-1.9,1.5c-0.6,0.4-1.1,0.8-1.7,1.1l-0.9,0.5c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0-0.3,0.2-0.4,0.2
+			c-0.2,0.1-0.4,0.2-0.5,0.2c-3.7,1.8-8.5,3-12.7,3.4L72.7,89c-0.8,0.1-2.8,0.2-4.7,0.2c-1.6,0-3,0-3.5-0.2l0.3-0.7
+			c0.6-1.4,1.3-2.8,2.1-4.1c0.1-0.2,0.2-0.4,0.4-0.6l1.5-2.6l3.9-5.3l3.5-3.6l0.2-0.2c0.2-0.1,0.2-0.1,0.3-0.2l0.8-0.7
+			c0.1-0.1,0.2-0.1,0.3-0.2c0.2-0.2,0.3-0.3,0.5-0.4l3.7-2.5c1.3-0.8,2.6-1.6,3.8-2.3l4-2.1c1.5-0.8,4-2.1,5.5-2.7l4.1-1.9
+			c-0.6,0.1-1.4,0.4-1.9,0.6c-0.6,0.2-1.3,0.4-1.9,0.6l-3.8,1.3c-1.8,0.6-3.6,1.4-5.5,2.1l-3.5,1.5c-1.3,0.5-3.3,1.6-4.7,2.3
+			c-1.5,0.8-2.9,1.8-4.3,2.6l-4.8,3.4c-0.1,0.1-0.2,0.2-0.4,0.3l-2.7,2.3c-0.8,0.8-1.8,1.7-2.5,2.5c-0.2,0.2-0.2,0.2-0.3,0.4
+			c-0.7,0.7-1.3,1.6-1.9,2.4c-0.9,1.2-1.8,2.5-2.5,3.8l-1.3,2.5c-0.5,1-2.7,6-2.8,7.4h-0.2c0-0.2-0.5-2.5-0.7-4.4v-1.6
+			c0-0.1,0-0.1,0-0.2c0.2-1.1,0.1-1.8,0.3-3.1c0.6-3.6,2.2-7.4,4.2-10.4l2.1-3c0.6-0.8,2.8-3.4,3.5-3.8c0.6-0.5,1.2-1.3,1.9-1.8
+			c0.3-0.2,0.6-0.5,0.9-0.8c0.4-0.2,0.6-0.5,1-0.8l2-1.5c2-1.5,4.2-2.8,6.4-3.8c2.4-1.2,4.7-2.1,7.2-3.1c3.2-1.3,7.6-2.2,10.9-2.9
+			c3.5-0.7,12.3-2.3,16.6-2.3h0.9C114,51.2,117.4,51.2,118.2,52.4z"/>
+		<path style="fill:none;" class="st3" d="M99.5,58.5c0.4,0,0.2,0,0.2-0.1C99.4,58.4,99.6,58.4,99.5,58.5z M99.5,58.5c0.1-0.1-0.1-0.1,0.2-0.1
+			C99.7,58.5,99.9,58.5,99.5,58.5 M99.9,58.3l-0.1,0.1 M99.5,58.5c-0.6,0.1-1.4,0.4-1.9,0.6c-0.6,0.2-1.3,0.4-1.9,0.6l-3.8,1.3
+			c-1.8,0.6-3.6,1.4-5.5,2.1l-3.5,1.5c-1.3,0.5-3.3,1.6-4.7,2.3c-1.5,0.8-2.9,1.8-4.3,2.6l-4.8,3.4c-0.1,0.1-0.2,0.2-0.4,0.3l-2.7,2.3
+			c-0.8,0.8-1.8,1.7-2.5,2.5c-0.2,0.2-0.2,0.2-0.3,0.4c-0.7,0.7-1.3,1.6-1.9,2.4c-0.9,1.2-1.8,2.5-2.5,3.8l-1.3,2.5
+			c-0.5,1-2.7,6-2.8,7.4h-0.2c0-0.2-0.5-2.5-0.7-4.4v-1.6c0-0.1,0-0.1,0-0.2c0.2-1.1,0.1-1.8,0.3-3.1c0.6-3.6,2.2-7.4,4.2-10.4l2.1-3
+			c0.6-0.8,2.8-3.4,3.5-3.8c0.6-0.5,1.2-1.3,1.9-1.8c0.3-0.2,0.6-0.5,0.9-0.8c0.4-0.2,0.6-0.5,1-0.8l2-1.5c2-1.5,4.2-2.8,6.4-3.8
+			c2.4-1.2,4.7-2.1,7.2-3.1c3.2-1.3,7.6-2.2,10.9-2.9c3.5-0.7,12.3-2.3,16.6-2.3h0h0.2h0.6c2.2,0,5.6,0.1,6.4,1.3
+			c-1.2,0-1.6,0.2-2.4,0.5c-0.9,0.3-1.9,1-2.6,1.7l-1.8,1.7c-0.2,0.2-0.2,0.2-0.3,0.4c-3.4,4.2-4.1,4.9-6.8,10.2
+			c-1.2,2.5-2.7,4.8-4.2,7.1c-1,1.6-2,3.2-3.2,4.6c-0.1,0.2-0.2,0.2-0.3,0.4c-0.7,0.9-1.7,1.7-2.5,2.5c-0.6,0.5-1.3,1-1.9,1.5
+			c-0.6,0.4-1.1,0.8-1.7,1.1l-0.9,0.5c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0-0.3,0.2-0.4,0.2c-0.2,0.1-0.4,0.2-0.5,0.2
+			c-3.7,1.8-8.5,3-12.7,3.4L72.7,89c-0.8,0.1-2.8,0.2-4.7,0.2c-1.6,0-3,0-3.5-0.2l0.3-0.7c0.6-1.4,1.3-2.8,2.1-4.1
+			c0.1-0.2,0.2-0.4,0.4-0.6l1.5-2.6l3.9-5.3l3.5-3.6c0.1-0.1,0.2-0.2,0.2-0.2c0.2-0.1,0.2-0.1,0.3-0.2l0.8-0.7
+			c0.1-0.1,0.2-0.1,0.3-0.2c0.2-0.2,0.3-0.3,0.5-0.4l3.7-2.5c1.3-0.8,2.6-1.6,3.8-2.3l4-2.1c1.5-0.8,4-2.1,5.5-2.7L99.5,58.5"/>
+	</symbol>
+
+	<symbol id="tcm-related-posts-arrow" viewBox="0 0 16 16">
+		<path class="st0" d="M8,15.9c-4.4,0-7.9-3.5-7.9-7.9S3.6,0.1,8,0.1s7.9,3.5,7.9,7.9S12.4,15.9,8,15.9z M8,2.4C4.9,2.4,2.4,4.9,2.4,8
+			s2.5,5.6,5.6,5.6s5.6-2.5,5.6-5.6S11.1,2.4,8,2.4z M11.9,8.3l-3.3,3.3c-0.1,0.1-0.2,0.1-0.2,0.1c-0.2,0-0.3-0.2-0.3-0.3v-2H4.4
+			C4.2,9.3,4.1,9.2,4.1,9V7c0-0.2,0.2-0.3,0.3-0.3H8v-2c0-0.2,0.1-0.3,0.3-0.3c0.1,0,0.2,0,0.2,0.1l3.3,3.3C11.9,7.9,12,7.9,12,8
+			S11.9,8.2,11.9,8.3z"/>
+	</symbol>
+
+	<symbol id="tcm-sort-by-dropdown" viewBox="0 0 12 7">
+		<path style="fill:#6E767D;" class="st0" d="M0.3,1.5l5.2,5.2c0,0,0.5,0.5,1.1,0l5.2-5.2c0,0,0.4-0.4,0.2-0.9c0,0-0.1-0.4-0.7-0.4H0.8c0,0-0.5,0-0.7,0.4
+			C0.1,0.5-0.2,1,0.3,1.5z"/>
+	</symbol>
+
+	<symbol id="tcm-author-icon" viewBox="0 0 1020 1080">
+		<polygon style="fill:#474F57" class="st0" points="44.5,882.9 251.4,1081 251.4,889.8 "/>
+		<path style="fill:#6E767D" class="st1" d="M937.8,891.8H81.2c-44.3,0-80.6-36.3-80.6-80.6V82.7c0-44.3,36.3-80.6,80.6-80.6h856.6
+			c44.3,0,80.6,36.3,80.6,80.6v728.5C1018.4,855.5,982.1,891.8,937.8,891.8z"/>
+		<g>
+			<path style="fill:#6E767D" class="st2" d="M732,688.3c-0.5,0.1-2.7,0.5-6.3,1.1c-142.4,25.4-168.6,29.8-171.6,30.1c-7,0.8-12.3,0.4-16-1.3
+				c-2.4-1-3.6-2.3-4-2.8c0.2-1,1.4-3.3,2.2-4.7c0.7-1.4,1.6-3,2.3-4.6c4.9-11.1,1.5-22.4-8.9-29.5c-7.8-5.3-18.1-7.4-30.6-6.3
+				c-7.5,0.6-138.9,22.6-211.1,34.7l-35.4,27.7c82.6-13.9,240.1-40.2,248.4-41c7.4-0.6,13.2,0.3,16.7,2.7c2,1.4,1.8,1.8,1.3,3.1
+				c-0.4,0.9-1,2-1.6,3.2c-2.4,4.4-5.6,10.5-4.5,18c1.2,8.2,7.3,15.3,16.7,19.4c5.3,2.3,11.4,3.5,18.4,3.5c2.8,0,5.7-0.2,8.8-0.5
+				c5.7-0.7,63.8-10.9,172.9-30.3c3.6-0.6,5.8-1,6.3-1.1c5.9-1,9.8-6.6,8.7-12.5C743.4,691.2,737.8,687.3,732,688.3L732,688.3z
+				 M732,688.3"/>
+			<path style="fill:#FFFFFF" class="st2" d="M349.8,583.9l-91.7,95.5c-10.1,10.5-17.2,23.5-20.6,37.7l130.2-102c40.8,18,73.3,23.7,98.3,23.7
+				c43.8,0,64.2-17.7,64.2-17.7c-40.8-21.2-46.6-60.6-46.6-60.6c31.3,13.2,96.4,28.7,96.4,28.7c86.5-57.5,131.7-181.9,131.7-181.9
+				c-9,2.5-17.5,3.5-25.6,3.5c-40.6,0-68.5-25.9-68.5-25.9l113-24.5c37.6-76.7,41.2-211.1,41.2-211.1L428.2,453.5
+				C389.2,487.9,361.9,533.4,349.8,583.9L349.8,583.9z M349.8,583.9"/>
+		</g>
+	</symbol>
+
+	<symbol id="tcm-bulk-action-arrow" viewBox="0 0 12 7">
+		<path style="fill:#6E767D" class="st0" d="M0.3,1.5l5.2,5.2c0,0,0.5,0.5,1.1,0l5.2-5.2c0,0,0.4-0.4,0.2-0.9c0,0-0.1-0.4-0.7-0.4H0.8c0,0-0.5,0-0.7,0.4
+			C0.1,0.5-0.2,1,0.3,1.5z"/>
+	</symbol>
+
+
+	</defs>
+	</svg>
+</div><script type="rocketlazyloadscript">(function() {function maybePrefixUrlField () {
+  const value = this.value.trim()
+  if (value !== '' && value.indexOf('http') !== 0) {
+    this.value = 'http://' + value
+  }
+}
+
+const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
+for (let j = 0; j < urlFields.length; j++) {
+  urlFields[j].addEventListener('blur', maybePrefixUrlField)
+}
+})();</script>    <script id="delayed_mediavine" type="text/javascript" data-noptimize="1">
+        function loadMediavine() {
+            var mv = document.createElement("script");
+            mv.src = "https://scripts.mediavine.com/tags/go-pet-friendly.js";
+            mv.setAttribute('data-cfasync', 'false');
+            mv.setAttribute('data-noptimize', '1');
+            mv.async = true;
+            document.querySelector("body").appendChild(mv);
+        }
+        setTimeout(loadMediavine, 2500);
+    </script>
+<script type="rocketlazyloadscript" id='dpsp-frontend-js-pro-js-before'>
+		var dpsp_pin_button_data = {"pin_description_source":"image_alt_tag","pinterest_button_share_behavior":"post_image","post_pinterest_image_hidden":"yes","button_position":"top_left","button_shape":"rectangular","minimum_image_width":"200","minimum_image_height":"200","show_button_text_label":"yes","button_text_label":"Save","button_share_behavior":"hover_image"}
+	
+</script>
+<script async data-noptimize src='https://www.gopetfriendly.com/blog/wp-content/plugins/social-pug/assets/dist/front-end-pro.2.16.3.js?ver=2.16.3' id='dpsp-frontend-js-pro-js'></script>
+<script id='tptn_tracker-js-extra'>
+var ajax_tptn_tracker = {"ajax_url":"https:\/\/www.gopetfriendly.com\/blog\/","top_ten_id":"28467","top_ten_blog_id":"1","activate_counter":"1","top_ten_debug":"0","tptn_rnd":"1136238280"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/plugins/top-10/includes/js/top-10-tracker.min.js?ver=3.2.5' id='tptn_tracker-js'></script>
+<script type="rocketlazyloadscript" id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/blog(\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$))|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.gopetfriendly.com\/blog","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script id='custom-script-js-extra'>
+var blog = {"ajaxurl":"https:\/\/www.gopetfriendly.com\/blog\/wp-admin\/admin-ajax.php","security":"535ab631cb"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/custom.js?ver=6.1.1' id='custom-script-js'></script>
+<script id='tve-dash-frontend-js-extra'>
+var tve_dash_front = {"ajaxurl":"https:\/\/www.gopetfriendly.com\/blog\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":"","recaptcha":[],"post_id":"28467"};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/plugins/thrive-comments/thrive-dashboard/js/dist/frontend.min.js?ver=3.33' id='tve-dash-frontend-js'></script>
+<script type="rocketlazyloadscript" data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.5.0' id='wpb_composer_front_js-js'></script>
+<script type="rocketlazyloadscript" defer data-rocket-src='https://www.gopetfriendly.com/blog/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.4' id='mc4wp-forms-api-js'></script>
+	<script type="rocketlazyloadscript">
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.gopetfriendly.com/blog/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+Userback = window.Userback || {};
+Userback.access_token = '4428|5969|txcJouHRLjiCWB8ERTnPgUOEaMk189ddar432bMHeiPmg3xVUt';
+(function(id) {
+    var s = document.createElement('script');
+    s.async = 1;s.src = 'https://static.userback.io/widget/v1.js';
+    var parent_node = document.head || document.body;parent_node.appendChild(s);
+})('userback-sdk');
+// end of userback widget
+</script>
+<div id="addFavoriteModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"><img width="9" height="9" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%209%209'%3E%3C/svg%3E" alt="Close" title="Close" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg"><noscript><img width="9" height="9" src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg" alt="Close" title="Close"></noscript></button>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="header-text">We know you’re excited to travel!</h1>
+                        <p class="modal-text">In order to save your trips and favorite destinations,<br/> you need to set up an account or <a href="#" class="login">login</a>.</p>
+                    </div>
+                </div>
+                <div class="row sign-up-with">
+				<div class="col-md-6">
+                        <button class="btn" id="googleSignIn">
+                            <img width="12" height="12" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2012'%3E%3C/svg%3E" alt="Sign In With Google" title="Sign In With Google" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-google.svg" /><noscript><img width="12" height="12" src="https://www.gopetfriendly.com/assets-front/images/icon-google.svg" alt="Sign In With Google" title="Sign In With Google" /></noscript>
+                            Sign In With Google
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn"  id="facebookSignIn">
+                            <img width="6" height="12" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%206%2012'%3E%3C/svg%3E" alt="Sign In With Facebook" title="Sign In With Facebook" class="f" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/facebook-icon.svg" /><noscript><img width="6" height="12" src="https://www.gopetfriendly.com/assets-front/images/facebook-icon.svg" alt="Sign In With Facebook" title="Sign In With Facebook" class="f" /></noscript>
+                            Sign In with Facebook
+                        </button>
+                    </div>
+                </div>
+                <h5>- OR -</h5>
+                <form method="post" name="register_form" id="register_form">
+                    <div class="row sign-up-form">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" name="stName" id="stName"/>
+                                </div>
+                                <label id="reg_name_error"></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" name="stEmail" id="stEmail"/>
+                                </div>
+                                <label id="reg_email_error"></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Password</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="password" name="stPassword" id="stPassword"/>
+                                </div>
+                                <label id="reg_password_error"></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                </div>
+                                <div class="col-md-8 centeralign">
+                                    <label class="custom-checkbox">Keep me logged in
+                                        <!-- <input type="checkbox" value="1" checked="checked"> -->
+                                        <input type="checkbox" name="remember" value="1" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="action" value="register">
+                    <p class="modal-disclaimer">By creating an account you agree to our <a href="https://blog.gopetfriendly.com/legal/terms-of-use/" target="_blank">Terms & Conditions</a></p>
+                    <button type="submit" class="btn btn-green-rounded">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="confirmationModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"><img width="9" height="9" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%209%209'%3E%3C/svg%3E" alt="Close" title="Close" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg"><noscript><img width="9" height="9" src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg" alt="Close" title="Close"></noscript></button>
+            <div class="modal-body">
+                <h3>Thanks for joining GoPetFriendly!</h3>
+                <p>Please check your email to confirm your registration</p>
+				<img width="803" height="448" class="modal-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20803%20448'%3E%3C/svg%3E" alt="Thanks for joining GoPetFriendly!" title="Thanks for joining GoPetFriendly!" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/success.jpg" /><noscript><img width="803" height="448" class="modal-img" src="https://www.gopetfriendly.com/assets-front/images/success.jpg" alt="Thanks for joining GoPetFriendly!" title="Thanks for joining GoPetFriendly!" /></noscript>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="loginModal" class="modal fade" role="dialog">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+		<button type="button" class="close" data-dismiss="modal"><img width="9" height="9" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%209%209'%3E%3C/svg%3E" alt="Close" title="Close" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg"><noscript><img width="9" height="9" src="https://www.gopetfriendly.com/assets-front/images/icon-close.svg" alt="Close" title="Close"></noscript></button>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="header-text">Login</h1>
+                    </div>
+                </div>
+                <div class="row sign-up-with">
+                    <div class="col-md-6">
+                        <button class="btn" id="googleSignIn">
+                            <img width="12" height="12" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2012'%3E%3C/svg%3E" alt="Sign In With Google" title="Sign In With Google" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/icon-google.svg" /><noscript><img width="12" height="12" src="https://www.gopetfriendly.com/assets-front/images/icon-google.svg" alt="Sign In With Google" title="Sign In With Google" /></noscript>
+                            Sign In With Google
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn"  id="facebookSignIn">
+                            <img width="6" height="12" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%206%2012'%3E%3C/svg%3E" alt="Sign In With Facebook" title="Sign In With Facebook" class="f" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/facebook-icon.svg" /><noscript><img width="6" height="12" src="https://www.gopetfriendly.com/assets-front/images/facebook-icon.svg" alt="Sign In With Facebook" title="Sign In With Facebook" class="f" /></noscript>
+                            Sign In with Facebook
+                        </button>
+                    </div>
+                </div>
+                <h5>- OR -</h5>
+                <div class="row login-form">
+                    <div class="col-md">
+                        <span id="login_error"> </span>
+                        <form id="login_form" action="https://www.gopetfriendly.com/login/login" method="post">
+                            <input type="hidden" name="tripPlanner" id="tripPlanner">
+                            <input type="email" name="email" id="email" placeholder="Email" value="" onkeyup="chkWhiteSpace(this)"/>
+                            <label id="email_error"></label>
+                            <input type="password" name="password" id="password" placeholder="Password" value=""/>
+                            <label id="password_error"></label>
+                            <a href="https://www.gopetfriendly.com/forgot_password">Forgot Password?</a>
+                            <label class="custom-checkbox">Keep me logged in
+                                <input type="checkbox" name="remember" value="1" >
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="hidden" name="action" value="login">
+                            <button class="btn btn-green-rounded">LOGIN</button>
+                        </form>
+                        <p>Don't have an account? <a href="javascript:;" class="join-now">Join Now!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="addSearchModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"><img width="14" height="14" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2014%2014'%3E%3C/svg%3E" alt="Close" title="Close" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/closewhite.svg" /><noscript><img width="14" height="14" src="https://www.gopetfriendly.com/assets-front/images/closewhite.svg" alt="Close" title="Close" /></noscript></button>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img width="142" height="69" class="modal-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20142%2069'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.gopetfriendly.com/assets-front/images/listing-not-found.svg" /><noscript><img width="142" height="69" class="modal-img" src="https://www.gopetfriendly.com/assets-front/images/listing-not-found.svg" alt="" /></noscript>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="hidden" id="searchValue">
+                        <p class="modal-text">Sorry we can't find any pet friendly listings in our database. Please make sure your search is spelled correctly or try typing fewer characters. <!-- <a href="javascript:void(0)" id="nearby_link">nearby</a>! --></p>
+                                                <p class="modal-text marb0"><a href="https://www.gopetfriendly.com//add_place" target="_blank" class="blue">Do you know of a pet friendly place here? Let us know.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="rocketlazyloadscript" id="delayed_modal_scripts" data-rocket-type="text/javascript">
+    function rkft_sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    var $ = jQuery;
+    (function($) {
+        const scripts = [
+            "https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/css_browser_selector.js",
+            "https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/jquery-ui.min.js",
+            "https://www.gopetfriendly.com/assets-front/js/jquery.validate.js",
+            "https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/bootstrap.min.js",
+            "https://www.gopetfriendly.com/blog/wp-content/themes/gopetfriendly/assets/js/nav.js?1684307299",
+            "https://www.gopetfriendly.com/assets-front/js/front-js/login.js",
+            "https://www.gopetfriendly.com/assets-front/js/additional-methods.min.js",
+            "https://www.gopetfriendly.com/assets-front/js/front-js/register.js",
+            "https://www.gopetfriendly.com/assets-front/js/front-js/footer.js?ver=1684307299"
+        ];
+        setTimeout(async function(){
+            let body = document.querySelector("body");
+            for (let i = 0; i < scripts.length; i++) {
+                var script = document.createElement("script");
+                script.src = scripts[i];
+                script.async = true;
+                body.appendChild(script);
+                await rkft_sleep(100);
+            }
+        },5000);
+    })(jQuery);
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+jQuery(document).ready(function($) {
+
+	getUserTag();
+
+	function getUserTag(){
+	    var id = $('#saveID').val();
+	    if(id != '' && id!=undefined){
+		$.ajax({
+		    url: url+'Login/getUserTag',
+		    type: "POST",
+		    dataType: 'html',
+		    data: {id : id},
+		    beforeSend: function (xhr){ 
+			$('.p-rmf-loader').show();
+		    },
+		    success: function(data){
+			$('.p-rmf-loader').hide();
+			$('#badgeArea').html(data);
+		    },
+		});
+	    }
+	    else{
+		return false;
+	    }
+	};
+	$('body').on('click', '#googleSignIn', function() {
+	    var redirect = $('#urlRedirect').val();
+	    $.ajax({
+		type:'post',
+		url:url+'Home/googleLogin',
+		data: {
+		    locationResirect : redirect,
+		},
+		dataType:'json',
+		success:function(res){
+		    console.log(res);
+		    window.location.href= res;
+		}
+	    }); 
+	});
+	$('body').on('click', '#facebookSignIn', function() {
+	    var redirect = $('#urlRedirect').val();
+	    $.ajax({
+		type:'post',
+		url:url+'Home/facebookLogin',
+		data: {
+		    locationResirect : redirect,
+		},
+		dataType:'json',
+		success:function(res){
+		    console.log(res);
+		    window.location.href= res;
+		}
+	    }); 
+	});
+
+	$('.userb').click(function(){
+		Userback.open();
+	});	
+});		
+</script>
+  
+</body>
+</html>
+<!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 6140 objects (1 MB) from Redis using PhpRedis (v5.3.7).
+-->
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1684307300 -->
